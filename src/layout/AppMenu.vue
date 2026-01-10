@@ -81,10 +81,6 @@ const menu = ref([
           },
         ],
       },
-      {
-        label: 'Chat',
-        to: 'a',
-      },
     ],
   },
   {
@@ -122,138 +118,26 @@ const menu = ref([
     ],
   },
   {
-    label: 'Navigation',
+    label: 'Components',
     items: [
       {
-        label: 'Dashboards',
+        icon: 'uil-box',
+        label: 'Base UI',
         open: false,
         items: [
           {
-            label: 'Analytics',
-            to: 'c',
+            label: 'Breadcrumb',
+            to: '/ui-breadcrumb',
           },
           {
-            label: 'Ecommerce',
-            open: false,
-            items: [
-              {
-                label: 'a',
-                items: [
-                  {
-                    label: 'aa',
-                    to: '/aa',
-                  },
-                ],
-              },
-            ],
+            label: 'Cards',
+            to: '/ui-cards',
+          },
+          {
+            label: 'Tabs',
+            to: '/ui-tabs',
           },
         ],
-      },
-      {
-        label: 'Chat',
-        to: 'a',
-      },
-    ],
-  },
-  {
-    label: 'Navigation',
-    items: [
-      {
-        label: 'Dashboards',
-        open: false,
-        items: [
-          {
-            label: 'Analytics',
-            to: 'c',
-          },
-          {
-            label: 'Ecommerce',
-            open: false,
-            items: [
-              {
-                label: 'a',
-                items: [
-                  {
-                    label: 'aa',
-                    to: '/aa',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Chat',
-        to: 'a',
-      },
-    ],
-  },
-  {
-    label: 'Navigation',
-    items: [
-      {
-        label: 'Dashboards',
-        open: false,
-        items: [
-          {
-            label: 'Analytics',
-            to: 'c',
-          },
-          {
-            label: 'Ecommerce',
-            open: false,
-            items: [
-              {
-                label: 'a',
-                items: [
-                  {
-                    label: 'aa',
-                    to: '/aa',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Chat',
-        to: 'a',
-      },
-    ],
-  },
-  {
-    label: 'Navigation',
-    items: [
-      {
-        label: 'Dashboards',
-        open: false,
-        items: [
-          {
-            label: 'Analytics',
-            to: 'c',
-          },
-          {
-            label: 'Ecommerce',
-            open: false,
-            items: [
-              {
-                label: 'a',
-                items: [
-                  {
-                    label: 'aa',
-                    to: '/aa',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Chat',
-        to: 'a',
       },
     ],
   },
@@ -291,7 +175,7 @@ const menu = ref([
               class="p-2.5 pb-1 text-[0.9375rem] flex items-center cursor-pointer relative"
               @click="item.open = !item.open"
             >
-              <i class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"></i>
+              <i :class="item.icon" class="w-11.25 inline-block text-[1.2rem] text-center"></i>
               <span class="pl-1">{{ item.label }}</span>
               <span
                 v-if="item.items"
@@ -311,10 +195,10 @@ const menu = ref([
                     :to="subitem.to"
                     class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer relative"
                   >
-                    <i class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"></i>
+                    <i class="w-11.25 inline-block text-[1.2rem] text-center"></i>
                     <span>{{ subitem.label }}</span>
                     <span
-                      v-if="item.items"
+                      v-if="subitem.items"
                       class="mdi mdi-chevron-right right-3.75 absolute"
                     ></span>
                   </RouterLink>

@@ -22,6 +22,30 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .card {
+    @apply w-[50%] p-6 bg-white mr-3
+           shadow-[0_0_35px_0_rgba(154,161,171,0.15)];
+  }
+  .card-title {
+    @apply font-bold mb-2 tracking-[.02em]
+  }
+}
+
 .scrollbar {
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;

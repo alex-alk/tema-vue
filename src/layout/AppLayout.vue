@@ -8,9 +8,7 @@ import AppTopbar from './AppTopbar.vue'
   <AppTopbar />
   <AppMenu />
   <div class="ml-65 pb-15 pl-6 pr-6">
-    <div class="layout-main">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
   </div>
   <AppFooter />
 </template>

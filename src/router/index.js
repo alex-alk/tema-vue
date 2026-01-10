@@ -15,7 +15,19 @@ const router = createRouter({
         },
         {
           path: '/pages-starter',
-          component: () => import('../views/pages/starter/PagesStarter.vue'),
+          component: () => import('../views/pages/PagesStarter.vue'),
+        },
+        {
+          path: '/ui-breadcrumb',
+          component: () => import('../views/ui/BreadCrumb.vue'),
+        },
+        {
+          path: '/ui-cards',
+          component: () => import('../views/ui/CardS.vue'),
+        },
+        {
+          path: '/ui-tabs',
+          component: () => import('../views/ui/TabS.vue'),
         },
       ],
     },
