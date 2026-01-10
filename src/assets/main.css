@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@import './remixicon.css';
+@import './unicons.css';
+@import './css/materialdesignicons.min.css';
+
+@font-face {
+  font-family: 'Nunito';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200 1000;
+  src: url('./fonts/nunito.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-display: swap;
+  font-style: italic;
+  font-weight: 200 1000;
+  src: url('./fonts/nunito-italic.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.scrollbar:hover {
+  scrollbar-color: #a2adb7 transparent;
+}
