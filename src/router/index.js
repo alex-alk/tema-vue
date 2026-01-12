@@ -18,6 +18,10 @@ const router = createRouter({
           component: () => import('../views/pages/PagesStarter.vue'),
         },
         {
+          path: '/form-elements',
+          component: () => import('../views/forms/BasicElements.vue'),
+        },
+        {
           path: '/ui-breadcrumb',
           component: () => import('../views/ui/BreadCrumb.vue'),
         },
@@ -30,6 +34,10 @@ const router = createRouter({
           component: () => import('../views/ui/TabS.vue'),
         },
       ],
+    },
+    {
+      path: '/pages-register',
+      component: () => import('../views/pages/authentication/PagesRegister.vue'),
     },
     {
       path: '/about',

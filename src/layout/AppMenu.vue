@@ -58,26 +58,12 @@ const menu = ref([
     items: [
       {
         label: 'Dashboards',
+        icon: 'uil-home-alt',
         open: false,
         items: [
           {
             label: 'Analytics',
             to: 'c',
-          },
-          {
-            label: 'Ecommerce',
-            open: false,
-            items: [
-              {
-                label: 'a',
-                items: [
-                  {
-                    label: 'aa',
-                    to: '/aa',
-                  },
-                ],
-              },
-            ],
           },
         ],
       },
@@ -88,32 +74,24 @@ const menu = ref([
     items: [
       {
         label: 'Pages',
+        icon: 'uil-copy-alt',
         open: false,
         items: [
+          {
+            label: 'Authentication',
+            open: false,
+            items: [
+              {
+                label: 'Register',
+                to: '/pages-register',
+              },
+            ],
+          },
           {
             label: 'Starter Page',
             to: '/pages-starter',
           },
-          {
-            label: 'Ecommerce',
-            open: false,
-            items: [
-              {
-                label: 'a',
-                items: [
-                  {
-                    label: 'aa',
-                    to: '/aa',
-                  },
-                ],
-              },
-            ],
-          },
         ],
-      },
-      {
-        label: 'Chat',
-        to: 'a',
       },
     ],
   },
@@ -136,6 +114,16 @@ const menu = ref([
           {
             label: 'Tabs',
             to: '/ui-tabs',
+          },
+        ],
+      },
+      {
+        label: 'Forms',
+        icon: 'uil-document-layout-center',
+        items: [
+          {
+            label: 'Basic Elements',
+            to: 'form-elements',
           },
         ],
       },
@@ -166,7 +154,7 @@ const menu = ref([
               :to="item.to"
               class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer"
             >
-              <i class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"></i>
+              <i class="w-11.25 inline-block text-[1.2rem] text-center"></i>
               <span class="pl-1">{{ item.label }}</span>
               <span v-if="item.items" class="mdi mdi-chevron-right right-3.75 absolute"></span>
             </RouterLink>
@@ -207,10 +195,13 @@ const menu = ref([
                     class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer relative"
                     @click="subitem.open = !subitem.open"
                   >
-                    <i class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"></i>
+                    <i
+                      :class="subitem.icon"
+                      class="w-11.25 inline-block text-[1.2rem] text-center"
+                    ></i>
                     <span>{{ subitem.label }}</span>
                     <span
-                      v-if="item.items"
+                      v-if="subitem.items"
                       class="mdi mdi-chevron-right right-3.75 absolute"
                     ></span>
                   </a>
@@ -227,12 +218,10 @@ const menu = ref([
                           :to="subitem2.to"
                           class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer relative"
                         >
-                          <i
-                            class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"
-                          ></i>
+                          <i class="w-11.25 inline-block text-[1.2rem] text-center"></i>
                           <span>{{ subitem2.label }}</span>
                           <span
-                            v-if="item.items"
+                            v-if="subitem2.items"
                             class="mdi mdi-chevron-right right-3.75 absolute"
                           ></span>
                         </RouterLink>
@@ -241,9 +230,7 @@ const menu = ref([
                           class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer relative"
                           @click="subitem2.open = !subitem2.open"
                         >
-                          <i
-                            class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"
-                          ></i>
+                          <i class="w-11.25 inline-block text-[1.2rem] text-center"></i>
                           <span>{{ subitem2.label }}</span>
                           <span
                             v-if="item.items"
@@ -263,9 +250,7 @@ const menu = ref([
                                 :to="subitem3.to"
                                 class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer relative"
                               >
-                                <i
-                                  class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"
-                                ></i>
+                                <i class="w-11.25 inline-block text-[1.2rem] text-center"></i>
                                 <span>{{ subitem3.label }}</span>
                                 <span
                                   v-if="item.items"
@@ -277,9 +262,7 @@ const menu = ref([
                                 class="p-2.5 pb-1 text-[0.9375rem] block cursor-pointer relative"
                                 @click="subitem3.open = !subitem3.open"
                               >
-                                <i
-                                  class="uil-home-alt w-11.25 inline-block text-[1.2rem] text-center"
-                                ></i>
+                                <i class="w-11.25 inline-block text-[1.2rem] text-center"></i>
                                 <span>{{ subitem3.label }}</span>
                                 <span
                                   v-if="item.items"
