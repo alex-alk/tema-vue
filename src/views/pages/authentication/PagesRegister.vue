@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const passwordVisible = ref(false)
+</script>
 
 <template>
   <div class="sm:py-18 flex justify-center">
@@ -15,6 +19,26 @@
         <div class="mb-6">
           <label class="label">Full Name</label>
           <input class="input" placeholder="Enter your name" />
+        </div>
+
+        <div class="mb-6">
+          <label class="label">Email address</label>
+          <input class="input" placeholder="Enter your email" />
+        </div>
+
+        <div class="mb-6">
+          <label class="label">Password</label>
+          <div class="flex w-full">
+            <input type="password" placeholder="Enter your password" class="input rounded-r-none" />
+            <div @click="passwordVisible = !passwordVisible" class="password-eye-box">
+              <span
+                :class="{
+                  'mdi mdi-eye-off-outline': passwordVisible,
+                  'mdi mdi-eye-outline': !passwordVisible,
+                }"
+              ></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

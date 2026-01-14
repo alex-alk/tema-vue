@@ -1,6 +1,8 @@
 <script setup>
 import PageTop from '@/components/PageTop.vue'
+import { ref } from 'vue'
 
+const passwordVisible = ref(false)
 </script>
 
 <template>
@@ -24,17 +26,32 @@ import PageTop from '@/components/PageTop.vue'
       <div class="flex-1 pr-3">
         <div class="mb-6">
           <label class="label">Text</label>
-          <input
-            class="input"
-          />
+          <input class="input" />
         </div>
 
         <div class="mb-6">
           <label class="label">Email</label>
-          <input
-            placeholder="Email"
-            class="input"
-          />
+          <input placeholder="Email" class="input" />
+        </div>
+
+        <div class="mb-6">
+          <label class="label">Password</label>
+          <input type="password" value="password" class="input" />
+        </div>
+
+        <div class="mb-6">
+          <label class="label">Show/Hide Password</label>
+          <div class="flex w-full">
+            <input type="password" placeholder="Enter your password" class="input rounded-r-none" />
+            <div @click="passwordVisible = !passwordVisible" class="password-eye-box">
+              <span
+                :class="{
+                  'mdi mdi-eye-off-outline': passwordVisible,
+                  'mdi mdi-eye-outline': !passwordVisible,
+                }"
+              ></span>
+            </div>
+          </div>
         </div>
       </div>
 

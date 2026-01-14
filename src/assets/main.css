@@ -50,6 +50,13 @@ body {
   .label {
     @apply font-semibold mb-2 inline-block;
   }
+  .password-eye-box {
+    @apply flex items-center py-[0.45rem] px-[0.9rem] bg-[#f6f7fb] border border-[#e5e8eb] rounded-sm rounded-tl-none rounded-bl-none -ml-px;
+  }
+
+  .password-eye-box > span {
+    @apply cursor-pointer text-[16px];
+  }
 }
 
 .scrollbar {
