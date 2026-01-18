@@ -1,0 +1,23 @@
+@layer components {
+  .btn {
+    @apply shadow-(--shadow) transition-all duration-150 bg-(--color-bg) text-white py-[0.45rem] px-[0.9rem] rounded-[0.15rem] cursor-pointer;
+  }
+
+  .btn:hover {
+    @apply bg-(--color-primary-hover);
+  }
+
+  .btn-primary {
+    --color-bg: var(--color-primary);
+    --shadow: 0px 2px 6px 0px rgba(114, 124, 245, 0.5);
+  }
+
+  .btn-danger {
+    --color-bg: var(--color-danger);
+    --shadow: 0px 2px 6px 0px rgba(250, 92, 124, 0.5);
+  }
+
+  .btn-primary:hover {
+    --color-primary-hover: #6973e3;
+  }
+}

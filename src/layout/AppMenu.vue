@@ -1,57 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// const model = ref([
-//   {
-//     label: 'Home',
-//     items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }],
-//   },
-//   {
-//     label: 'Hierarchy',
-//     items: [
-//       {
-//         label: 'Submenu 1',
-//         icon: 'pi pi-fw pi-bookmark',
-//         items: [
-//           {
-//             label: 'Submenu 1.1',
-//             icon: 'pi pi-fw pi-bookmark',
-//             items: [
-//               { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark' },
-//               { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-//               { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
-//             ],
-//           },
-//           {
-//             label: 'Submenu 1.2',
-//             icon: 'pi pi-fw pi-bookmark',
-//             items: [{ label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }],
-//           },
-//         ],
-//       },
-//       {
-//         label: 'Submenu 2',
-//         icon: 'pi pi-fw pi-bookmark',
-//         items: [
-//           {
-//             label: 'Submenu 2.1',
-//             icon: 'pi pi-fw pi-bookmark',
-//             items: [
-//               { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-//               { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' },
-//             ],
-//           },
-//           {
-//             label: 'Submenu 2.2',
-//             icon: 'pi pi-fw pi-bookmark',
-//             items: [{ label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' }],
-//           },
-//         ],
-//       },
-//     ],
-//   },
-// ])
-
 const menu = ref([
   {
     label: 'Navigation',
@@ -106,6 +55,10 @@ const menu = ref([
           {
             label: 'Breadcrumb',
             to: '/ui-breadcrumb',
+          },
+          {
+            label: 'Buttons',
+            to: '/ui-buttons',
           },
           {
             label: 'Cards',

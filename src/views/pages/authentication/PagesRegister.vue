@@ -5,24 +5,23 @@ const passwordVisible = ref(false)
 </script>
 
 <template>
-  <div class="sm:py-18 flex justify-center">
+  <div class="sm:py-12.5 flex justify-center">
     <div class="max-w-104">
-      <div class="card p-8">
-        <img src="/src/assets/img/logo.png" class="h-5 mx-auto" />
-        <div class="p-14 pt-7">
-          <h4 class="font-bold mb-2 tracking-[.02em] text-center text-lg">Free Sign Up</h4>
-          <p class="text-[14px] text-[#8a969c]">
-            Don't have an account? Create your account, it takes less than a minute
+      <div class="card p-9">
+        <img src="/src/assets/img/logo.png" class="h-7 mx-auto" />
+        <div class="pb-13 pt-6 px-11">
+          <p class="text-[14px] text-muted text-center">
+            Let's get you started. Create your account by entering your details below.
           </p>
         </div>
 
         <div class="mb-6">
-          <label class="label">Full Name</label>
+          <label class="label">Name</label><span class="text-danger"> *</span>
           <input class="input" placeholder="Enter your name" />
         </div>
 
         <div class="mb-6">
-          <label class="label">Email address</label>
+          <label class="label">Email address</label><span class="text-danger"> *</span>
           <input class="input" placeholder="Enter your email" />
         </div>
 
@@ -39,6 +38,16 @@ const passwordVisible = ref(false)
               ></span>
             </div>
           </div>
+        </div>
+
+        <div class="mb-6">
+          <input id="cb" type="checkbox" class="checkbox" />
+          <label class="label" for="cb"
+            >I accept <a class="text-[rgb(114,124,245)]" href="/">Terms and Conditions</a></label
+          >
+        </div>
+        <div class="w-full flex justify-center">
+          <button type="button" class="btn btn-primary">Sign Up</button>
         </div>
       </div>
     </div>

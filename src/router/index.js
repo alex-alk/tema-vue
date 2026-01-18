@@ -26,6 +26,10 @@ const router = createRouter({
           component: () => import('../views/ui/BreadCrumb.vue'),
         },
         {
+          path: '/ui-buttons',
+          component: () => import('../views/ui/ButtonS.vue'),
+        },
+        {
           path: '/ui-cards',
           component: () => import('../views/ui/CardS.vue'),
         },
